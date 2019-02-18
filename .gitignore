@@ -114,3 +114,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# pycharm
+.idea/
+
+# images
+*/result_image/
+*/target_image/
+
+*.caffemodel
