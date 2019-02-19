@@ -4,7 +4,7 @@ PROJECT_DIR=$(pwd)
 FOLDER_TO_DRAW="frankfurt"
 
 INPUT_FOLDER="../target_image/"$FOLDER_TO_DRAW
-OUTPUT_FOLDER="./result_image/refinedet320_plus_coco/"$FOLDER_TO_DRAW
+OUTPUT_FOLDER="../result_image/refinedet320_plus_coco/"$FOLDER_TO_DRAW
 
 LABELMAP_FILE="./labelmap_voc.prototxt"
 MODEL_DEF="./model/refinedet_320.prototxt"

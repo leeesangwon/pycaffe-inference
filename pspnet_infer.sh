@@ -4,7 +4,7 @@ PROJECT_DIR=$(pwd)
 FOLDER_TO_DRAW="frankfurt"
 
 INPUT_FOLDER="../target_image/"$FOLDER_TO_DRAW
-OUTPUT_FOLDER="./result_image/pspnet101_473_cityscapes/"$FOLDER_TO_DRAW
+OUTPUT_FOLDER="../result_image/pspnet101_473_cityscapes/"$FOLDER_TO_DRAW
 
 LABELMAP_FILE="./colormapcs.mat"
 MODEL_DEF="./model/pspnet101_473.prototxt"
