@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 plt.rcParams['image.interpolation'] = 'nearest'
-plt.rcParams['image.cmap'] = 'gray'
+# plt.rcParams['image.cmap'] = 'gray'
 
 
 class ImageCropper(object):
