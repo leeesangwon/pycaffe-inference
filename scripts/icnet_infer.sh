@@ -20,7 +20,7 @@ docker run --runtime=nvidia -it --rm \
     --ulimit stack=67108864 \
     -v ${PROJECT_DIR}:/project \
     ${DOCKER_IMAGE} \
-    bash -c "cd /project/segmentation_infer && \
+    bash -c "cd /project/segmentation && \
             python segmentation_infer.py $INPUT_FOLDER $OUTPUT_FOLDER \
                 --labelmap-file $LABELMAP_FILE \
                 --model-def $MODEL_DEF \

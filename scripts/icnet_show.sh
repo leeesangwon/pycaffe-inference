@@ -22,7 +22,7 @@ docker run --runtime=nvidia -it --rm \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=unix$DISPLAY \
     ${DOCKER_IMAGE} \
-    bash -c "cd /project/segmentation_infer && \
+    bash -c "cd /project/segmentation && \
             python segmentation_show.py $INPUT_FOLDER \
                 --labelmap-file $LABELMAP_FILE \
                 --model-def $MODEL_DEF \
