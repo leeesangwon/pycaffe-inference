@@ -35,8 +35,8 @@ https://github.com/NVIDIA/nvidia-docker
         - PSPNet: [caffemodel](https://github.com/hszhao/PSPNet/tree/master/evaluation/model), [prototxt](https://github.com/hszhao/PSPNet/tree/master/evaluation/prototxt)
         - ICNet: [caffemodel](https://github.com/hszhao/ICNet/tree/master/evaluation/model), [prototxt](https://github.com/hszhao/ICNet/tree/master/evaluation/prototxt)
 
-5. Move images to process to the `./detection_infer/target_image` or `./segmentation_infer/target_image`  
-처리할 이미지들을 `./detection_infer/target_image` 또는 `./segmentation_infer/target_image`에 옮겨줍니다.  
+5. Move images to process to the `./target_image`    
+처리할 이미지들을 `./target_image`에 옮겨줍니다.  
 
 6. Edit shell scripts and run.
     - Object detection

@@ -120,6 +120,6 @@ dmypy.json
 
 # images
 */result_image/
-*/target_image/
+target_image/
 
 *.caffemodel
