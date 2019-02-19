@@ -16,7 +16,7 @@ os.environ['GLOG_minloglevel'] = '2'
 import caffe
 
 from segmentation_infer.network import SegmentationNetwork
-from detection_infer.network import DetectionNetwork
+from detection.network import DetectionNetwork
 
 try:
     FileNotFoundError
