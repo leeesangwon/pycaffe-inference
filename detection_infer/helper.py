@@ -66,7 +66,8 @@ class BBoxPainter(object):
     def __init__(self, labelmap, dpi=120):
         self.dpi = dpi
         self.labelmap = labelmap
-        self.drawing_labels = ['bicycle', 'bus', 'car', 'motorbike', 'person', 'train']
+        self.drawing_labels = None
+        # self.drawing_labels = ['bicycle', 'bus', 'car', 'motorbike', 'person', 'train']
 
     def __call__(self, image, detections):
         h, w = image.shape[0:2]
@@ -122,7 +123,7 @@ class BBoxPainter(object):
         for i in xrange(top_conf.shape[0]):
             label = int(top_label_indices[i])
             label_name = top_labels[i]
-            if label_name not in self.drawing_labels:
+            if self.drawing_labels is not None and label_name not in self.drawing_labels:
                 continue
             xmin = int(round(top_xmin[i] * image.shape[1]))
             ymin = int(round(top_ymin[i] * image.shape[0]))
