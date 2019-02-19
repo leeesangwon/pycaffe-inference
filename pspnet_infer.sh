@@ -4,13 +4,13 @@ PROJECT_DIR=$(pwd)
 FOLDER_TO_DRAW="frankfurt"
 
 INPUT_FOLDER="../target_image/"$FOLDER_TO_DRAW
-OUTPUT_FOLDER="./result_image/refinedet320_plus_coco/"$FOLDER_TO_DRAW
+OUTPUT_FOLDER="./result_image/pspnet101_473_cityscapes/"$FOLDER_TO_DRAW
 
-LABELMAP_FILE="./labelmap_voc.prototxt"
-MODEL_DEF="./model/refinedet_320.prototxt"
-MODEL_WEIGHTS="./model/refinedet_320.caffemodel"
+LABELMAP_FILE="./colormapcs.mat"
+MODEL_DEF="./model/pspnet101_473.prototxt"
+MODEL_WEIGHTS="./model/pspnet101_cityscapes.caffemodel"
 
-IMAGE_SIZE=320
+IMAGE_SIZE=473
 
 DOCKER_IMAGE=leeesangwon/nvcaffe:19.01-py2.refinedet.pspnet
 
@@ -20,8 +20,8 @@ docker run --runtime=nvidia -it --rm \
     --ulimit stack=67108864 \
     -v ${PROJECT_DIR}:/project \
     ${DOCKER_IMAGE} \
-    bash -c "cd /project && \
-            python detection_infer.py $INPUT_FOLDER $OUTPUT_FOLDER \
+    bash -c "cd /project/segmentation_infer && \
+            python segmentation_infer.py $INPUT_FOLDER $OUTPUT_FOLDER \
                 --labelmap-file $LABELMAP_FILE \
                 --model-def $MODEL_DEF \
                 --model-weights $MODEL_WEIGHTS \
