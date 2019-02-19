@@ -6,9 +6,9 @@ FOLDER_TO_DRAW="frankfurt"
 INPUT_FOLDER="./target_image/"$FOLDER_TO_DRAW
 
 DET_LABELMAP_FILE="./detection_infer/labelmap_voc.prototxt"
-DET_MODEL_DEF="./detection_infer/model/ssd_300.prototxt"
-DET_MODEL_WEIGHTS="./detection_infer/model/ssd_300_coco_voc07++12.caffemodel"
-DET_IMAGE_SIZE=300
+DET_MODEL_DEF="./detection_infer/model/refinedet_320.prototxt"
+DET_MODEL_WEIGHTS="./detection_infer/model/refinedet_320_coco_voc07++12.caffemodel"
+DET_IMAGE_SIZE=320
 
 
 SEG_LABELMAP_FILE="./segmentation_infer/colormapcs.mat"
