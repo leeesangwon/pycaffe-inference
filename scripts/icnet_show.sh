@@ -5,11 +5,11 @@ FOLDER_TO_DRAW="frankfurt"
 
 INPUT_FOLDER="../target_image/"$FOLDER_TO_DRAW
 
-LABELMAP_FILE="./labelmap_voc.prototxt"
-MODEL_DEF="./model/ssd_300.prototxt"
-MODEL_WEIGHTS="./model/ssd_300_coco_voc07++12.caffemodel"
+LABELMAP_FILE="./colormapcs.mat"
+MODEL_DEF="./model/icnet_cityscapes.prototxt"
+MODEL_WEIGHTS="./model/icnet_cityscapes_trainval_90k.caffemodel"
 
-IMAGE_SIZE=300
+IMAGE_SIZE="1025 2049"
 
 DOCKER_IMAGE=leeesangwon/nvcaffe:19.01-py2.refinedet.pspnet
 
@@ -22,8 +22,8 @@ docker run --runtime=nvidia -it --rm \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     -e DISPLAY=unix$DISPLAY \
     ${DOCKER_IMAGE} \
-    bash -c "cd /project/detection_infer && \
-            python detection_show.py $INPUT_FOLDER \
+    bash -c "cd /project/segmentation && \
+            python segmentation_show.py $INPUT_FOLDER \
                 --labelmap-file $LABELMAP_FILE \
                 --model-def $MODEL_DEF \
                 --model-weights $MODEL_WEIGHTS \

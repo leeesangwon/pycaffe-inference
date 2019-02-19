@@ -5,15 +5,15 @@ FOLDER_TO_DRAW="frankfurt"
 
 INPUT_FOLDER="./target_image/"$FOLDER_TO_DRAW
 
-DET_LABELMAP_FILE="./detection_infer/labelmap_voc.prototxt"
-DET_MODEL_DEF="./detection_infer/model/ssd_300.prototxt"
-DET_MODEL_WEIGHTS="./detection_infer/model/ssd_300_coco.caffemodel"
+DET_LABELMAP_FILE="./detection/labelmap_voc.prototxt"
+DET_MODEL_DEF="./detection/model/ssd_300.prototxt"
+DET_MODEL_WEIGHTS="./detection/model/ssd_300_coco_voc07++12.caffemodel"
 DET_IMAGE_SIZE=300
 
 
-SEG_LABELMAP_FILE="./segmentation_infer/colormapcs.mat"
-SEG_MODEL_DEF="./segmentation_infer/model/icnet_cityscapes.prototxt"
-SEG_MODEL_WEIGHTS="./segmentation_infer/model/icnet_cityscapes_trainval_90k.caffemodel"
+SEG_LABELMAP_FILE="./segmentation/colormapcs.mat"
+SEG_MODEL_DEF="./segmentation/model/icnet_cityscapes.prototxt"
+SEG_MODEL_WEIGHTS="./segmentation/model/icnet_cityscapes_trainval_90k.caffemodel"
 SEG_IMAGE_SIZE="1025 2049"
 
 DOCKER_IMAGE=leeesangwon/nvcaffe:19.01-py2.refinedet.pspnet
