@@ -38,21 +38,39 @@ https://github.com/NVIDIA/nvidia-docker
 5. Move images to process to the `./target_image`    
 처리할 이미지들을 `./target_image`에 옮겨줍니다.  
 
-6. Edit shell scripts and run.
+6. Edit shell scripts and run.  
+실행할 shell 스크립트를 알맞게 수정합니다.
     - Object detection
-
-        ```bash
-        cd detection_infer
-        bash ssd_infer.sh
-        bash refinedet_infer.sh
-        ```
+        
+        - Scripts to save the results
+            ```bash
+            bash scripts/ssd_infer.sh
+            bash scripts/refinedet_infer.sh
+            ```
+        
+        - Scripts to display the results
+            ```bash
+            bash scripts/ssd_show.sh
+            bash scripts/refinedet_show.sh
+            ```
 
     - Semantic segmentation
-
+        
+        - Scripts to save the results
+            ```bash
+            bash scripts/pspnet_infer.sh
+            bash scripts/icnet_infer.sh
+            ```
+        
+        - Scripts to display the results
+            ```bash
+            bash scripts/pspnet_show.sh
+            bash scripts/icnet_show.sh
+            ```
+    - Scripts to display the object detection and semantic segmentation results simultaneously
         ```bash
-        cd segmentation_infer
-        bash pspnet_infer.sh
-        bash icnet_infer.sh
+        bash scripts/ssd_icnet_show.sh
+        bash scripts/refinedet_icnet_show.sh
         ```
 
 ## Caffe code to build docker image
