@@ -3,7 +3,7 @@ PROJECT_DIR=$(pwd)
 
 FOLDER_TO_DRAW="frankfurt"
 
-INPUT_FOLDER="./target_image/"$FOLDER_TO_DRAW
+INPUT_FOLDER="../target_image/"$FOLDER_TO_DRAW
 
 LABELMAP_FILE="./colormapcs.mat"
 MODEL_DEF="./model/icnet_cityscapes.prototxt"
